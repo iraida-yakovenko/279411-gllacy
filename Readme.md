@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Ираида Яковенко](https://up.htmlacademy.ru/htmlcss/16/user/279411).
-* Наставник: [Николай Маркелов] (https://up.htmlacademy.ru/htmlcss/16/user/235291).
+* Наставник: [Николай Маркелов](https://up.htmlacademy.ru/htmlcss/16/user/235291).
 
 ---
 
