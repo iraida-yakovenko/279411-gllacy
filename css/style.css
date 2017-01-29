@@ -89,6 +89,7 @@ h2 {
 .feature {
 	margin-bottom: 40px;
 	
+	/* Только для оформления сетки */
 	min-height: 305px;
 }
 
@@ -105,6 +106,7 @@ h2 {
 .box {
 	margin-bottom: 40px;
 	
+	/* Только для оформления сетки */
 	min-height:219px;
 }
 
@@ -121,6 +123,7 @@ h2 {
 .map {
 	width: 100%;
 	
+	/* Только для оформления сетки */
 	min-height:429px;
 }
 
