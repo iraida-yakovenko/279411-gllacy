@@ -1,9 +1,14 @@
 body {
+	margin:0;
+	padding:0;
+	
+	font-weight: normal;
 	font-size: 16px;
 	line-height: 22px;
-	color: #323232;
-	font-weight: normal;
 	font-family: "Roboto", "Arial", sans-serif;
+	color: #323232;
+	
+	background: #849D8F no-repeat center;
 }
 
 h1 {
@@ -32,29 +37,250 @@ h2 {
 	margin: 0 auto;
 }
 
+.main-header {
+	color: #000000;
+}
+
 .logo {
+	margin-top: 10px;
+	
 	width: 154px;
 	float: left;
-	
-	/* Только для оформления сетки */
-	min-height: 74px;
 }
 
-.main-navigation {
-	width: 397px;
+.main-navigation {	
 	float: left;
+	margin-top: 20px;
 	
-	/* Только для оформления сетки */
-	min-height: 74px;
+	width: 407px;
 }
 
-.block {
-	width: 267px;
-	float: right;
-	
-	/* Только для оформления сетки */
-	min-height: 125px;
+.main-navigation ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  font-size: 0;
 }
+
+.main-navigation li {
+  display: inline-block;
+  margin-right:15px;
+
+  
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  vertical-align: middle;
+}
+
+.main-navigation li:last-child {
+	margin-right: 0;
+}
+
+.main-navigation a {
+  display: block;
+  margin-bottom: 10px;
+  padding: 8px 14px;
+  
+  color: #ffffff;
+}
+  
+.main-navigation a:hover {
+  padding: 8px 14px;
+  
+  color: #323232;
+  text-decoration: none;
+  
+  background-color:#f7f6f3;
+  border-radius: 20px;
+}
+
+/*Выпадающее меню*/
+.navigation-item {
+	position: relative;
+}
+
+.sub-navigation {
+	position: absolute;	
+	
+	display:none;
+	margin: 0;
+	pading: 0;
+	
+	left: -10px;
+	
+	width:145px;
+	
+	color: #323232;
+
+	background-color: #F8F7F4;
+	border-radius:6px;
+	z-index: 1;
+	
+	box-shadow: 0 20px 20px 0 rgba(89, 89, 89, 0.4);
+}
+
+.sub-navigation li {
+	margin: 0;
+	padding: 0;
+}
+
+.sub-navigation a {
+	
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 18px;
+  color: #323232;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.navigation-item a:focus~.sub-navigation,
+.main-navigation li:hover .sub-navigation{
+	display: block;
+	}
+/* КОНЕЦ Выпадающего меню*/	
+
+
+.user-block {
+	position: relative;
+	float: right;
+	min-width: 267px;
+	margin-top: 20px;
+	
+	text-align: right;
+}
+
+.user-block a {
+	margin-bottom: 16px;
+}
+
+.user-block p{
+	margin: 0;
+	padding: 0;
+	
+	font-weight: bold;
+	color:#ffffff;
+}
+
+.phone {	
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 24px;
+	color:#ffffff;
+}
+
+/* Юзер блок - окошки*/
+
+.top-search-modal,
+.top-login-modal {
+  display: none;
+}  
+  /* стилизуем поиск */
+  
+.top-search {
+	display: block;
+	float: left;
+	width: 32px;
+	height: 32px;
+	
+	font-size: 0;
+	border-radius: 50%;
+	background: url("../img/search-icon.png") no-repeat, rgba(255, 255, 255, 0.2);
+	background-position: center;
+}
+
+.top-search:hover {
+	background:  url("../img/sprite.png") no-repeat, rgba(255, 255, 255, 1); 
+	background-position: 3px 3px;
+}
+
+/* стилизуем вход */
+
+.top-login {
+	float: left;
+	margin-left: 10px;
+	padding: 5px 14px 5px 45px;
+	
+	color:#ffffff;
+	text-decoration: none;
+	background: url("../img/login-icon.png") no-repeat,  rgba(255, 255, 255, 0.2);
+	background-position:15px center;
+	border-radius: 25px;	
+}
+/* стилизуем корзину*/
+.top-basket {
+	float: left;
+	margin-left: 10px;
+	padding: 5px 34px 5px 45px;
+	
+	color:#ffffff;
+	text-decoration: none;
+	background: url("../img/basket.png") no-repeat,  rgba(255, 255, 255, 0.2);
+	background-position:15px center;
+	border-radius: 25px;	
+}
+ /*Модальные окошки*/
+.top-search-modal,
+.top-login-modal {
+	position: absolute;
+	
+	background-color: #F8F7F4;
+	border-radius: 6px; 
+	
+	box-shadow: 0 20px 20px 0 rgba(89, 89, 89, 0.4);
+}
+ 
+.top-search-modal {	
+	right: 240px;
+	bottom: -30px;
+	width: 345px;
+	height: 83px;
+	
+	
+}
+
+.top-login-modal .btn {
+	display: inline-block;
+	margin-right: 16px;
+	padding: 10px 23px;
+
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+	font-family: "Roboto", "Arial", sans-serif;
+	vertical-align: top;
+	text-align: center;
+	color:#FEFEFE;
+	text-decoration: none;
+
+	background-color: #EE5C3E;
+	border: none;
+	border-radius: 25px;
+	cursor: pointer;
+}
+
+.top-search-modal  input, .top-login-modal input {
+	box-sizing: border-box;
+	margin: 20px 15px auto;
+	width: 310px;
+	height: 45px;
+	
+	border: 1px solid #D3D3D2;
+	background-color: #ffffff;
+	border-radius: 6px;
+}
+
+
+.top-search:focus ~ .top-search-modal,
+.top-login:focus ~ .top-login-modal,
+.top-search-modal:hover,
+.top-login-modal:hover {
+  display: block;
+}
+
+/* Юзер блок - окошки - конец*/
 
 .bonus {
 	margin-bottom: 38px;
@@ -177,7 +403,7 @@ h2 {
 /*======================================
  Системное оформление - не изменять
 =======================================*/
-
+/*
 body {
   padding: 3px;
 }
@@ -188,21 +414,7 @@ body > * > * > * {
   position: relative;
 }
 
-body > *::before,
-body > * > *::before,
-body > * > * > *::before {
-  content: "";
-  position: absolute;
 
-  height: 24px;
-  padding: 2px 5px;
-
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 24px;
-  font-family: "Courier New", monotype;
-  white-space: nowrap;
-}
 
 body > *::before {
   top: -3px;

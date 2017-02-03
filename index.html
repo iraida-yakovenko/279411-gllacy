@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Gllacy shop</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
@@ -13,8 +14,25 @@
 				</div>
 				<nav class="main-navigation">
 					<ul>
-						<li>
-							<a href="#">Каталог</a>
+						<li class="navigation-item">
+							<a href="#" >Каталог</a>
+								<ul class="sub-navigation">
+									<li>
+										<a href="#"><b>Новинки</b></a>
+									</li>
+									<li>
+										<a href="#">Сливочное</a>
+									</li>
+									<li>
+										<a href="#">О Щербеты</a>
+									</li>
+									<li>
+										<a href="#">Фруктовый лед</a>
+									</li>
+									<li>
+										<a href="#">О Мелорин</a>
+									</li>
+								</ul>
 						</li>
 						<li>
 							<a href="#">Доставка и оплата</a>
@@ -24,13 +42,29 @@
 						</li>
 					</ul>
 				</nav>
-				<div class="block">
-					<input type="search" name="search">
-					<a href="#" class="login">Вход</a>
-					<a href="#" class="basket">Пусто</a>
-					<p>С 10 до 20, ежедневно <br>
-						8 812 450-25-25
-					</p>
+				<div class="user-block">
+					<a href="#" class="top-search">Поиск</a>
+					<a href="#" class="top-login">Вход</a>
+					<a href="#" class="top-basket">Пусто</a>
+					<!-- Поиск -->
+					<div class="top-search-modal">
+						<input  type="search" name="search" placeholder="Что ищем?">
+					</div>
+					<!-- Вход в личный кабинет -->
+					<div class="top-login-modal">
+						<form action="https:htmlacademy.ru" method="post">							
+							<input type="text" name="login" id="login" placeholder="Электронная почта">
+							<input type="text" name="password" id="password" placeholder="Пароль">
+							<button class="btn" type="submit">Войти</button>
+							<a href="#">Забыли пароль?</a> <br>
+							<a href="#">Новая регистрация</a>							
+						</form>
+					</div>
+					<!-- Корзина 
+					<div class="top-basket-modal"> третье </div>-->
+					<p>С 10 до 20, ежедневно </p>
+						<span class="phone">8 812 450-25-25</span>
+					
 				</div>
 			</div>
 		</header>
