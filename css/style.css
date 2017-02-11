@@ -175,7 +175,17 @@ a:active {
 	box-sizing: border-box;
 }
 
-.sub-navigation .active {
+.sub-navigation .sub-menu:first-child {
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+.sub-navigation .sub-menu:last-child {
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+.sub-menu-active  {
 	color: #F3D4C1;
 	background: #EB7257;
 }
@@ -208,7 +218,8 @@ a:active {
 }
 /*Нажатие */
 .sub-menu:active {
-	background-color: #F6B5A5;
+	color: #FFFFFF;
+	background: #EB7257;
 }	
 	
 /* Юзер- блок*/	
@@ -216,7 +227,7 @@ a:active {
 .user-block {
 	position: relative;
 	float: right;
-	width: 267px;
+	min-width: 267px;
 	margin-top: 23px;
 	
 	text-align: right;
@@ -263,26 +274,13 @@ a:active {
 	
 	font-size: 0;
 	border-radius: 50%;
-	background: rgba(255, 255, 255, 0.2);
-	background-position: center;
-}
-.top-search::before {
-	position: absolute;
-	top: 1px;
-	left: 7px;
-	
-	content: "";
-	width: 25px;
-	height: 25px;
-		
-	background: url("../img/sprite.png") no-repeat,  rgba(255, 255, 255, 0);
-	background-position:-24px 4px;
-	z-index: -1;
+	background: url("../img/sprite.png"), rgba(255, 255, 255, 0.2);
+	background-position:-23px 6px;
 }
 
-.top-search:hover::before {
-	background:  url("../img/sprite.png") no-repeat; 
-	background-position: 2px 3px;
+.top-search:hover {
+	background:  url("../img/sprite.png"), rgba(255, 255, 255, 0.9); 
+	background-position: 3px 4px;
 }
 
 
@@ -316,7 +314,6 @@ a:active {
 	background-position:-140px 3px;
 }
 
-.top-search:hover, 
 .top-login:hover {
 	background: rgba(255, 255, 255, 0.9);
 	color: #E9E8E5;
@@ -331,6 +328,7 @@ a:active {
 .top-basket {
 	float: left;
 	margin-left: 10px;
+	width: 118px;
 	padding: 7px 33px 11px 45px;
 	
 	font-size: 14px;
@@ -341,6 +339,22 @@ a:active {
 	background-position:17px center;
 	border-radius: 25px;	
 }
+
+.user-block .top-basket-full {
+	float: left;
+	margin-left: 10px;
+	padding: 7px 15px 11px 45px;
+	
+	font-size: 14px;
+	line-height: 16px;
+	color: #323232;
+	
+	text-decoration: none;
+	background: url("../img/basket-of.png") no-repeat,  rgba(255, 255, 255, 0.9);
+	background-position:17px center;
+	border-radius: 25px;	
+}
+
  /*Модальные окошки*/
  
  
@@ -355,6 +369,11 @@ a:active {
 	
 	box-shadow: 0 20px 20px 0 rgba(89, 89, 89, 0.4);
 }
+
+.top-search-modal label,
+.top-login-modal label {
+	color: transparent;
+} 
 
 .top-search-modal form,
 .top-login-modal form
@@ -566,7 +585,7 @@ a:active {
   position: relative;
   
   margin-bottom: 42px;
-  padding-top: 392px;
+  padding-top: 274px;
 
   text-align: center;
   color: #ffffff;
@@ -987,7 +1006,7 @@ a:active {
 
 .map-contacts p {
 	margin: 0;
-	margin-bottom: 20px;
+	margin-bottom: 26px;
 	
 	font-size: 14px;
 	line-height: 20px;
@@ -1187,14 +1206,73 @@ a:active {
 	margin-right: 0;
 }
 
+/*Пагинация*/
+
+
 .paginator {
 	margin-bottom:26px;
+	text-align: right;
+	padding: 10px;
+    white-space: nowrap;
 }
+
+.paginator a {
+    display: inline-block;
+    min-width: 25px;
+    height: 25px;
+	
+    text-align: center;
+    vertical-align: middle;
+	font-size: 16px;
+    line-height: 22px;
+	font-weight: 500;
+	
+    text-decoration: none; 	
+	border-radius: 50%;  
+}
+
+.paginator a:hover {
+	color: #ffffff;
+	
+	background-color: rgba(255, 255, 255, 0.2);
+}
+.paginator a:active,
+.paginator .current,
+.paginator .current:hover  {
+	color: #323232;
+	
+	background-color: #ffffff;
+}
+
+
+.paginator .prev {
+    margin-right: 20px;	
+}
+
+.paginator .next {
+    margin-left: 20px;
+}
+
+.paginator .disabled {
+	opacity: 0.6;
+}
+
+.paginator .prev:hover,
+.paginator .next:hover {
+	background-color: rgba(255, 255, 255, 0);
+}
+
 /* Footer */
  
 .main-footer {
-	padding-top: 20px;
+	
 	padding-bottom: 25px;
+	
+}
+
+.main-footer .container {
+	padding-top: 20px;
+	border-top: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .footer-social {
@@ -1287,14 +1365,33 @@ a:active {
 }
 
 .footer-material a{	
+    padding-left: 30px;
+	
 	font-size: 13px;
 	line-height: 18px;
 	font-weight: 200;
+	
 		
 }
 
+.footer-list {
+	min-width: 560px;
+	margin: 0;
+	padding: 0;
+	
+	list-style: none;
+}
+
+.footer-material .favorites {
+	font-weight: 700;
+	padding-left: 30px;
+	
+	background: url(../img/heart.png) no-repeat 10px 3px;
+}
 
 .footer-copyright {
+	position: relative;
+	
 	float:right;
 	width:267px;
 	padding-top: 40px;
@@ -1304,83 +1401,17 @@ a:active {
 	font-size: 12px;
 	line-height: 18px;
 	font-weight: 200;
-	
-	background-image: url(../img/logo-academy.png);
-	background-repeat: no-repeat;
-	background-position: 81px 0;
 }
 
-.footer-copyright .link {
-	display: inline-block;
-	vertical-align: bottom;
-		
+.footer-copyright img {
+	position: absolute;
+	top: -4px;
+	left: 81px;
+}
+
+.footer-copyright .link {		
 	font-size: 12px;
 	line-height: 18px;
-	font-weight: 200;
-		
+	font-weight: 200;		
 }
 
-/*======================================
- Системное оформление - не изменять
-=======================================*/
-/*
-body {
-  padding: 3px;
-}
-
-body > *,
-body > * > *,
-body > * > * > * {
-  position: relative;
-}
-
-
-
-body > *::before {
-  top: -3px;
-  left: -3px;
-}
-
-body > * > *::before {
-  top: -3px;
-  left: -3px;
-}
-
-body > * > * > *::before {
-  top: 0;
-  left: 0;
-}
-
-body > * {
-  background: rgba(0, 128, 0, 0.2);
-  box-shadow: 0 0 0 3px green;
-}
-
-body > *::before {
-  color: white;
-
-  background: green;
-}
-
-body > * > * {
-  background: rgba(255, 45, 82, 0.2);
-  box-shadow: 0 0 0 3px rgb(255, 45, 82);
-}
-
-body > * > *::before {
-  color: white;
-
-  background: rgb(255, 45, 82);
-}
-
-body > * > * > * {
-  background: rgba(234, 255, 45, 0.2);
-  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
-
-}
-
-body > * > * > *::before {
-  color: black;
-
-  background: rgb(234, 255, 45);
-}

@@ -20,7 +20,7 @@
 										<a class="sub-menu" href="#"><b>Новинки</b></a>
 									</li>
 									<li>
-										<a class="sub-menu active" href="#">Сливочное</a>
+										<a class="sub-menu sub-menu-active" href="#">Сливочное</a>
 									</li>
 									<li>
 										<a class="sub-menu" href="#">О Щербеты</a>
@@ -44,7 +44,7 @@
 				<div class="user-block">
 					<a href="#" class="top-search">Поиск</a>
 					<a href="#" class="top-login">Вход</a>
-					<a href="#" class="top-basket">Пусто</a>
+					<a href="#" class="top-basket-full">2 товара</a>
 					<!-- Поиск -->
 					<div class="top-search-modal">
 						<input  type="search" name="search" placeholder="Что ищем?">
@@ -224,32 +224,44 @@
 				</article>
 			</div>
 			<div class="paginator">
-				<a class="prev" href="#prev">&lt;</a>
-				<a href="#1">1</a>
+				<a class="prev disabled" href="#prev">&#60;</a>
+				<a class="current" href="#1">1</a>
 				<a href="#2">2</a>
 				<a href="#3">3</a>
 				<a href="#4">4</a>
 				<a href="#5">5</a>
-				<a class="next" href="#next">&gt;</a>
+				<a class="next" href="#next">&#62;</a>
 			</div>			
 		</div>
 		<footer class="main-footer">
 			<div class="container clearfix">
 				<section class="footer-social">
-					<a href="#" class="social-btn social-btn-tw">Твиттер</a>
-					<a href="#" class="social-btn social-btn-inst">Инстаграм</a>
-					<a href="#" class="social-btn social-btn-fb">Фейсбук</a>
-					<a href="#" class="social-btn social-btn-vk">Вконтакте</a>
+					<a class="social-btn social-btn-tw">Твиттер</a>
+					<a class="social-btn social-btn-inst" >Инстаграм</a>
+					<a class="social-btn social-btn-fb">Фейсбук</a>
+					<a class="social-btn social-btn-vk">Вконтакте</a>
 				</section>
 				<section class="footer-material">
-					<a href="#" class="link">Для поставщиков</a>
-					<a href="#" class="link">Наши документы</a>
-					<a href="#" class="link">О производстве</a>
-					<a href="#" class="link">Экологические стандарты</a>
+				<ul class="footer-list">
+					<li>
+						<a class="favorites"  href="#">Для поставщиков</a>
+					</li>
+					<li>
+						<a href="#">Наши документы</a>
+					</li>
+					<li>
+						<a href="#">О производстве</a>
+					</li>
+					<li>
+						<a href="#">Экологические стандарты</a>
+					</li>
+				</ul>
 				</section>
 				<section class="footer-copyright">
 					Сделано в
-					<a class="link" href="https://htmlacademy.ru">HTML Academy</a>
+					<a href="https://htmlacademy.ru">
+					<img src="img/logo-academy.png" width="108" height="38">
+					HTML Academy</a>
 					&copy;2017
 				</section>
 			</div>
