@@ -372,7 +372,7 @@ a:active {
 
 .top-search-modal label,
 .top-login-modal label {
-	color: transparent;
+	visibility: hidden;
 } 
 
 .top-search-modal form,
