@@ -467,7 +467,7 @@ a:active {
 
 .top-search:focus ~ .top-search-modal,
 .top-login:focus ~ .top-login-modal,
-.top-basket:focus ~ .top-basket-modal,
+.top-basket-full:focus ~ .top-basket-modal,
 .top-search-modal:hover,
 .top-login-modal:hover,
 .top-basket-modal:hover {
