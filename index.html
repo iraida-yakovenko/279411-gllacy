@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>Gllacy shop</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" />
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
@@ -65,9 +66,10 @@
 							<label>Пароль</label>
 							<input type="text" name="password" id="password" placeholder="Пароль">
 							<button class="btn" type="submit">Войти</button>
+							</form>
 							<a href="#">Забыли пароль?</a> <br>
 							<a href="#">Новая регистрация</a>							
-						</form>
+						
 					</div>
 					<!-- Корзина -->
 					<div class="top-basket-modal">
@@ -208,15 +210,17 @@
 					<a class="social-btn social-btn-vk">Вконтакте</a>
 				</section>
 				<section class="footer-material">
-				<ul class="footer-list">
+				<ul class="footer-list left">
 					<li>
 						<a class="favorites"  href="#">Для поставщиков</a>
 					</li>
 					<li>
-						<a href="#">Наши документы</a>
-					</li>
-					<li>
 						<a href="#">О производстве</a>
+					</li>
+				</ul>
+				<ul class="footer-list right">
+					<li>
+						<a href="#">Наши документы</a>
 					</li>
 					<li>
 						<a href="#">Экологические стандарты</a>
@@ -232,19 +236,53 @@
 				</section>
 			</div>
 		</footer>
+	</div>
+	
+		<div class="feedback-modal-wrapper">
 		<div class="feedback-modal">
+			<button class="feedback-modal-close" type="button" title="Закрыть">Закрыть</button>
 					<p>Мы обязательно вам ответим!</p>
 						<form action="https:htmlacademy.ru" method="post">
 						<label for="name">Как вас зовут?</label>
-							<input type="text" id="name" name="name" placeholder="Как вас зовут?">
+							<input type="text" id="name" name="name" placeholder="Как вас зовут?" required>
 							<label for="email">Ваша почта для ответа?</label>
-							<input type="email" name="email" id="email" placeholder="Ваша почта для ответа?">
+							<input type="email" name="email" id="email" placeholder="Ваша почта для ответа?" required>
 							<textarea name="text" id="text">Напишите что-нибудь...</textarea>				
 						<button type="submit" class="btn">Отправить</button>
-						</form>	
-		<div class="modal-overlay"></div>				
+						</form>						
 		</div>
 		
-</div>
+			<div class="modal-overlay"></div>
+		</div>
+	
+    
+	 <script>
+		var link = document.querySelector(".top-feedback");
+		
+		var popup = document.querySelector(".feedback-modal-wrapper");
+		
+		var close = popup.querySelector(".feedback-modal-close");
+		
+		var Name = popup.querySelector("[name=name]");
+
+		link.addEventListener("click", function(event) {
+		event.preventDefault();
+		popup.classList.add("feedback-modal-wrapper-show");
+		Name.focus();
+      });
+	  
+	  close.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("feedback-modal-wrapper-show");
+      });
+	  
+	  window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (popup.classList.contains("feedback-modal-wrapper-show")) {
+            popup.classList.remove("feedback-modal-wrapper-show");
+          }
+        }
+      });
+     </script>
 	</body>
 </html>

@@ -3,10 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Каталог магазина Глейси</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" />
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
-		<header class="main-header">
+		<header class="main-header main-header-inner">
 			<div class="container clearfix">
 				<div class="logo">
 					<img src="img/logo.png" width="154" height="64" alt="Магазин Глейси">
@@ -47,32 +48,36 @@
 					<a href="#" class="top-basket-full">2 товара</a>
 					<!-- Поиск -->
 					<div class="top-search-modal">
-						<input  type="search" name="search" placeholder="Что ищем?">
+						<label for="search">Что ищем?</label>
+						<input  type="search" name="search" id="search" placeholder="Что ищем?">
 					</div>
 					<!-- Вход в личный кабинет -->
 					<div class="top-login-modal">
-						<form action="https:htmlacademy.ru" method="post">							
+						<form action="https:htmlacademy.ru" method="post">
+							<label for="login">Логин</label>
 							<input type="text" name="login" id="login" placeholder="Электронная почта">
+							<label>Пароль</label>
 							<input type="text" name="password" id="password" placeholder="Пароль">
 							<button class="btn" type="submit">Войти</button>
+							</form>
 							<a href="#">Забыли пароль?</a> <br>
 							<a href="#">Новая регистрация</a>							
-						</form>
+						
 					</div>
 					<!-- Корзина -->
 					<div class="top-basket-modal">
 						<div class="basket-product clearfix">
 						<button type="submit" class="close">Закрыть</button>
-							<p class="product-name">Пломбир с апельсиновым джемом</p>
-							<p class="number"> 1.5&#215; <span>200 руб.</span></p>
+							<p class="product-name pt1">Пломбир с апельсиновым джемом</p>
+							<p class="number"> 1,5кг&#215; <span>200 руб.</span></p>
 								<span class="sum">300 руб</span>
 														
 						</div>							
-						<div class="basket-product clearfix">
+						<div class="basket-product  clearfix">
 						<button type="submit" class="close">Закрыть</button>
-							<p class="product-name">Клубничный пломбир с присыпкой из белого шоколада</p>
-							<p class="number"> 1.5&#215; <span>300 руб.</span></p>				
-								<span class="sum"> 450 руб</span>
+							<p class="product-name pt2">Клубничный пломбир с присыпкой из белого шоколада</p>
+							<p class="number"> 1,5кг&#215; <span>300 руб.</span></p>				
+							 <span class="sum">450 руб</span>
 														
 						</div>
 						<div class="total">
@@ -87,68 +92,71 @@
 				</div>
 			</div>
 		</header>
-		<div class="container">
+	<div class="container">
 			<div class="breadcrumbs">
-				<a href="index.html">Главная </a>&#187;	 
-				<a href="#">Каталог </a>&#187;
-				<a href="#">Сливочное</a>
+				<a href="index.html">Главная</a>&#187;	 
+				<a href="#">Каталог</a>&#187;
+				<a href="#" class="active">Сливочное</a>
 			</div>
 			<h1 class="catalog-header">Сливочное мороженое</h1>
 			<section class="change clearfix">
 				<form method="get" action="https://echo.htmlacademy.ru" >
 					<div class="change-population">
-						<label for="sort">Сортировка:</label><br>
+						<label for="sort">Сортировка:</label>
 						<select id="sort" name="sort" class="filter">
-							<option value="">По популярности</option>
+							<option value="" disabled selected>По популярности</option>
 							<option value="">Сначала недорогие</option>
 							<option value="">Сначала дорогие</option>
 							<option value="">По жирности</option>
 						</select>
 					</div>
-					<div class="change-price">
-						<label for="price">Цена:100руб-500руб.</label><br>
-						<input class="filter" type="range" min="100" max="500">
+					
+					<div class="filter-range">
+					  <div class="price-controls">
+						<label class="min-price">Цена: <input type="text" name="min-price" value="100 руб."></label>
+						<label class="max-price">-<input type="text" name="max-price" value="500 руб."></label>
+					  </div>
+					  <div class="range-controls">
+						<div class="scale">
+						  <div class="bar"></div>
+						</div>
+						<div class="range-toggle range-toggle-min"></div>
+						<div class="range-toggle range-toggle-max"></div>
+					  </div>
 					</div>
 					<div class="change-fat">
-						<p>Жирность</p>
-						<ul class="filter">
-						<li>
+						<p>Жирность:</p>
+						<div class="filter-wrapper">
 						  <input type="radio" name="fat" id="fat1"><label for="fat1">0%</label>
-						</li>
-						<li>
+						
 						  <input type="radio" name="fat" id="fat2"><label for="fat2">до 10%</label>
-						</li>
-						<li>
+						
 						  <input type="radio" name="fat" id="fat3"><label for="fat3">до 30%</label>
-					    </li>
-						<li>
+					    
 						 <input type="radio" name="fat" id="fat4"><label for="fat4">выше 30%</label>
-						</li>
-						</ul>
+						</div>
 					</div>
 					<div class="change-filler">
 						<p>Наполнители:</p>
-					<ul class="filter">
-					 <li>
+					<div class="filter-wrapper">
+					 
 						<input type="checkbox" id="filler1" name="chokolate"><label for="filler1">Шоколадные</label>
-						</li>
-						<li>
+						
 						<input type="checkbox" id="filler2" name="sugar"><label for="filler2">Сахарные присыпки</label>
-						</li>
-						<li>
+						
 						<input type="checkbox" id="filler3" name="fruits"><label for="filler3">Фрукты</label>
-						</li>
-						<li>
+						
 						<input type="checkbox" id="filler4" name="sirops"><label for="filler4">Сиропы</label>
-						</li>
-						<li>
+						
 						<input type="checkbox" id="filler5" name="jam"><label for="filler5">Джемы</label>
-						</li>
+					</div>	
 					</div>
-					</ul>
-					<button type="submit" class="btn btn-hollow">Применить</button>
+					
+					<button type="submit" class="btn-hollow">Применить</button>
 				</form>
 			</section>
+	</div>
+		<div class="container-catalog">
 			<div class="catalog">
 				<article class="catalog-item">
 					<img src="img/product1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой 	стружкой">					
@@ -222,15 +230,18 @@
 					<a href="#" class="link">Сливочное с мятным сиропом</a>
 					<a href="#" class="link-btn">Быстрый просмотр</a>					
 				</article>
+				
 			</div>
+		</div>
+		<div class="container">
 			<div class="paginator">
-				<a class="prev disabled" href="#prev">&#60;</a>
+				<a class="prev disabled" href="#prev"></a>
 				<a class="current" href="#1">1</a>
 				<a href="#2">2</a>
 				<a href="#3">3</a>
 				<a href="#4">4</a>
 				<a href="#5">5</a>
-				<a class="next" href="#next">&#62;</a>
+				<a class="next" href="#next"></a>
 			</div>			
 		</div>
 		<footer class="main-footer">
@@ -242,15 +253,17 @@
 					<a class="social-btn social-btn-vk">Вконтакте</a>
 				</section>
 				<section class="footer-material">
-				<ul class="footer-list">
+				<ul class="footer-list left">
 					<li>
 						<a class="favorites"  href="#">Для поставщиков</a>
 					</li>
 					<li>
-						<a href="#">Наши документы</a>
-					</li>
-					<li>
 						<a href="#">О производстве</a>
+					</li>
+				</ul>
+				<ul class="footer-list right">
+					<li>
+						<a href="#">Наши документы</a>
 					</li>
 					<li>
 						<a href="#">Экологические стандарты</a>
