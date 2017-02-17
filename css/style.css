@@ -127,13 +127,9 @@ a:active {
   border-radius: 20px;
 }
 
-.navigation-link:active {
-  
-  box-shadow: inset 0 2px 1px 0 #696969;
-  
+.navigation-link:active { 
+  box-shadow: inset 0 2px 1px 0 #696969; 
 }
-
-
 
 
 /*Выпадающее меню*/
@@ -177,11 +173,6 @@ a:active {
 	box-sizing: border-box;
 }
 
-.sub-menu-active  {
-	color: #F3D4C1;
-	background: #EB7257;
-}
-
 
 .sub-menu{
    display: inline-block;
@@ -195,9 +186,14 @@ a:active {
   vertical-align: middle;
 }
 
-.sub-navigation a:hover,
- .sub-navigation a:focus {
+.sub-menu:hover,
+ .sub-menu:focus {
 	color:#323232;
+}
+
+.sub-menu-active  {
+	color: #F3D4C1;
+	background: #EB7257;
 }
 
 .navigation-item a:focus~.sub-navigation,
@@ -372,18 +368,68 @@ a:active {
 	z-index: 5;
 	}
 
-.top-search-modal label,
-.top-login-modal label {
-	visibility: hidden;
-	font-weight: 200;
-	font-size: 11px;
-	line-height: 13px;
+.form {
+  position: relative; 
+  padding-top: 15px;
+}
+
+.form-input {
+	height: 45px;
+	padding:5px;
+	
+	box-sizing: border-box;
+	
+	font-size: 16px;
+	line-height: 24px;
+	color: #999999;
+	
+	border: 1px solid #D3D3D2;
+	background-color: #ffffff;
+	border-radius: 6px;
+}
+
+.form-label {
+  display: none; 
+  position: absolute;
+  top:-8px;
+  left: 6px;
+  font-size: 11px;
 } 
 
-.top-search-modal form,
-.top-login-modal form
- {
-	position: relative;
+.form-input:focus + .form-label {
+  display:block; 
+}
+
+.form-input:focus + label {
+  color: #8FBDEC; 
+}
+
+.form-input:hover {
+	border: 2px solid #C7C6C5;
+}
+
+.form-input:focus {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 700;
+	color: #323232;
+	
+	border: 2px solid #8FBDEC;
+	
+}
+
+
+.form-input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+.form-input:focus::-moz-placeholder {
+  opacity: 0;
+}
+.form-input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+.form-input:focus:-moz-placeholder {
+  opacity: 0;
 }
 
 /* Модальное окно поиска*/
@@ -394,15 +440,7 @@ a:active {
 }
 
 .top-search-modal  input, .top-login-modal input {
-	box-sizing: border-box;
 	width: 310px;
-	height: 45px;
-	padding:5px;
-	
-	color: #999999;
-	border: 1px solid #D3D3D2;
-	background-color: #ffffff;
-	border-radius: 6px;
 }
 
 
@@ -425,6 +463,7 @@ a:active {
 
 .top-login-modal input {
 	width: 240px;
+	margin-bottom: 15px;
 }
 
 .top-login-modal .btn {
@@ -444,20 +483,6 @@ a:active {
 	line-height: 24px;
 	color: #323232;
 	text-decoration-color: #ADACAA;
-}
-
-.top-login-modal input[id*="pas"] {
-	margin-bottom: 20px;
-}
-
-.top-search-modal input:hover,
-.top-login-modal input:hover {
-	border: 2px solid #C7C6C5;
-}
-
-.top-search-modal input:focus,
-.top-login-modal input:focus {
-	border: 2px solid #8FBDEC;
 }
 
 .btn {
@@ -775,6 +800,8 @@ a:active {
 	border-radius: 16px;
 }
 
+
+
 .bonus-left {	
 	float: left;
 	
@@ -786,7 +813,6 @@ a:active {
 	
 	background:url(../img/chocolate-fon.png) no-repeat center;
 }
-
 
 /* Бесцеллер*/
 .container-inner {
@@ -1142,10 +1168,6 @@ a:active {
 	animation: bounce 0.4s;
 }
 
-.feedback-modal input,
-.feedback-modal label {
-	display: block;
-}
 
 .feedback-modal-close {
   position: absolute;
@@ -1186,10 +1208,9 @@ a:active {
 	color: #323232;
 }
 
-.feedback-modal input, 
-.feedback-modal textarea  {
-	width: 265px;
-	height: 45px;
+.form-input, 
+.form-text {
+	
 	margin-bottom: 20px;
 	padding: 5px;
 	box-sizing: border-box;
@@ -1200,20 +1221,16 @@ a:active {
 	border-radius:  8px;
 }
 
- .feedback-modal textarea {
+.form-input {
+	width: 265px;
+	height: 45px;
+}
+
+ .form-text {
 	 width: 424px; 
 	 height: 153px;
  }
  
- .feedback-modal input:hover,
-.feedback-modal textarea:hover {
-	border: 2px solid #C7C6C5;
-}
-
-.feedback-modal input:focus,
-.feedback-modal textarea:focus {
-	border: 2px solid #8FBDEC;
-}
  .modal-overlay {
   position: fixed;
   top: 0;
@@ -1444,9 +1461,9 @@ input[type="checkbox"]:checked + label:hover {
 
 
 .btn-hollow {
-	padding: 8px 20px;
+	padding: 8px 27px;
 	
-	font-size: 14px;
+	font-size: 15px;
 	line-height: 18px;
 	font-weight: 700;
 	color: #ffffff;
@@ -1619,8 +1636,13 @@ input[type="checkbox"]:checked + label:hover {
 	
 }
 
+
 .main-footer .container {
 	padding-top: 20px;
+}
+
+.inner {
+	
 	border-top: 1px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -1713,7 +1735,7 @@ input[type="checkbox"]:checked + label:hover {
 }
 
 .footer-material a{	
-    padding-left: 10px;
+    padding-left: 30px;
 	
 	font-size: 13px;
 	line-height: 18px;
@@ -1737,7 +1759,7 @@ input[type="checkbox"]:checked + label:hover {
 
 .footer-material .favorites {
 	font-weight: 700;
-	padding-left: 30px;
+	
 	
 	background: url(../img/sprite-icon.png) no-repeat 1px -259px;
 }
