@@ -1043,6 +1043,9 @@ a:active {
     margin-bottom: 9px;
     padding-left: 18px;
 }
+.change-population option:nth-child(n+1) {
+	color: #323232;
+}
 .change-population,
 .change-price,
 .change-fat,
