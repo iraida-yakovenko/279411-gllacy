@@ -55,19 +55,19 @@ a:active {
     margin: 0 auto;
     color: #000000;
 }
-.main-header-inner {
-    margin-bottom: -22px;
-}
 .logo {
     margin-top: 10px;
     margin-right: 10px;
     width: 154px;
     float: left;
 }
+.logo a {
+    text-decoration: none;
+}
 .main-navigation {
     float: left;
     margin-top: 22px;
-    width: 407px;
+    min-width: 407px;
 }
 .main-navigation ul {
     margin: 0;
@@ -177,6 +177,11 @@ a:active {
 .user-block a {
     margin-bottom: 16px;
     color: #ffffff;
+}
+.work {
+    position: absolute;
+    right: 0;
+    top: 50px;
 }
 .time {
     margin: 0;
@@ -344,7 +349,7 @@ a:active {
 
 .top-search-modal {
     right: 230px;
-    bottom: -30px;
+    bottom: -75px;
 }
 .top-login-modal input {
     width: 310px;
@@ -520,7 +525,7 @@ a:active {
 .slider {
     position: relative;
     margin-bottom: 42px;
-    padding-top: 274px;
+    padding-top: 313px;
     text-align: center;
     color: #ffffff;
 }
@@ -657,12 +662,13 @@ a:active {
 .bestseller {
     margin: 0;
     padding: 0 15px;
-    margin-bottom: 20px;
+    margin-bottom: 9px;
 }
 .bestseller .bestseller-item {
     position: relative;
     z-index: 5;
     padding: 0 11px;
+    padding-bottom: 10px;
 }
 .bestseller-item::before {
     content: "";
@@ -821,13 +827,14 @@ a:active {
     border-radius: 16px;
 }
 .box-mail p {
-    margin: 0 auto 37px auto;
+    margin: 0 auto 22px auto;
 }
 .box-mail-inner input {
     box-sizing: border-box;
     width: 368px;
     height: 45px;
     margin-right: 10px;
+    margin-bottom: 0;
     padding: 5px;
     color: #999999;
     border: 1px solid #D3D3D2;
@@ -989,6 +996,9 @@ a:active {
 /* Страница каталога*/
 /* Фильтр */
 
+.catalog-inner {
+    margin-top: 17px;
+}
 .change {
     margin-bottom: 28px;
 }
@@ -1045,7 +1055,7 @@ a:active {
 
 .filter-range {
     position: relative;
-    top: 1px;
+    top: 3px;
     margin-right: 13px;
     display: inline-block;
     width: 220px;
@@ -1073,7 +1083,7 @@ a:active {
 }
 .range-controls {
     position: relative;
-    padding: 16px;
+    padding: 15px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
 }
@@ -1142,16 +1152,13 @@ input[type="radio"]:checked + label {
 input[type="radio"]:checked + label:hover {
     background-position: 0px -451px;
 }
-
-input[type="radio"]:disabled  + label,
- input[type="radio"]:disabled  + label:hover{
-	background-position: 0px -733px;	
+input[type="radio"]:disabled + label,
+input[type="radio"]:disabled + label:hover {
+    background-position: 0px -733px;
 }
-
-input[type="radio"]:checked :disabled+ label {
+input[type="radio"]:checked:disabled+ label {
     background-position: 0px -748px;
 }
-
 .change-filler label {
     padding-left: 30px;
     background-image: url(../img/sprite-icon.png);
@@ -1167,12 +1174,10 @@ input[type="checkbox"]:checked + label {
 input[type="checkbox"]:checked + label:hover {
     background-position: 0px -679px;
 }
-input[type="checkbox"]:disabled  + label,
-input[type="checkbox"]:disabled  + label:hover{
-	background-position: 0px -848px;
-	
+input[type="checkbox"]:disabled + label,
+input[type="checkbox"]:disabled + label:hover {
+    background-position: 0px -848px;
 }
-
 .btn-hollow {
     padding: 8px 27px;
     font-size: 15px;
@@ -1360,26 +1365,22 @@ input[type="checkbox"]:disabled  + label:hover{
     line-height: 18px;
     font-weight: 200;
 }
-.favorites {
-    padding-left: 20px;
+.left a {
+    padding-left: 29px;
 }
 .footer-list {
     display: inline-block;
     margin: 0;
     padding: 0;
-    padding-top: 9px;
+    padding-top: 5px;
     list-style: none;
     text-align: left;
     vertical-align: middle;
 }
 .footer-material .left {
-    margin-right: 18px;
-}
-.footer-material .right {
-    margin-left: 18px;
-}
-.left li {
-    padding-left: 8px;
+    position: relative;
+    left: -21px;
+    margin-right: 7px;
 }
 .footer-material .favorites {
     font-weight: 700;
@@ -1387,18 +1388,22 @@ input[type="checkbox"]:disabled  + label:hover{
 }
 .footer-copyright {
     position: relative;
+    top: -4px;
     float: right;
     width: 267px;
-    padding-top: 40px;
     text-align: right;
     font-size: 12px;
     line-height: 15px;
     font-weight: 200;
 }
+.footer-copyright p {
+    margin: 0;
+}
+.footer-copyright a {
+    text-decoration: none;
+}
 .footer-copyright img {
-    position: absolute;
-    top: -4px;
-    left: 81px;
+    margin-right: 77px;
 }
 .footer-copyright .link {
     font-size: 12px;
