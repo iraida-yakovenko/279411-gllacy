@@ -12,7 +12,7 @@ body > input[type="radio"] {
     display: none;
 }
 img {
-	width: 100%;
+    width: 100%;
 }
 a {
     color: rgba(255, 255, 255, 1);
@@ -71,7 +71,7 @@ a:active {
     float: left;
     margin-top: 22px;
     min-width: 407px;
-	max-width: 600px;
+    max-width: 600px;
 }
 .main-navigation ul {
     margin: 0;
@@ -159,7 +159,7 @@ a:active {
     display: block;
 }
 .sub-navigation li:first-child {
-	border-bottom: 1px solid #D1D0CE;
+    border-bottom: 1px solid #D1D0CE;
 }
 .sub-menu:hover {
     background-color: #FBDED8;
@@ -211,7 +211,6 @@ a:active {
 .top-basket-modal {
     display: none;
 }
-
 /*Поиск */
 
 .top-search {
@@ -234,7 +233,7 @@ a:active {
 /* Вход */
 
 .top-login {
-	display: inline-block;
+    display: inline-block;
     position: relative;
     float: left;
     margin-left: 10px;
@@ -268,7 +267,7 @@ a:active {
 /* Корзина*/
 
 .top-basket {
-	display: inline-block;
+    display: inline-block;
     float: left;
     margin-left: 10px;
     padding: 7px 33px 11px 45px;
@@ -302,6 +301,15 @@ a:active {
     border-radius: 6px;
     box-shadow: 0 20px 20px 0 rgba(89, 89, 89, 0.4);
     z-index: 5;
+}
+.top-search-modal span,
+.top-login-modal span,
+.top-basket-modal span {
+    position: absolute;
+    top: -13px;
+    width: 100%;
+    height: 20px;
+    background-color: transparent;
 }
 .form {
     position: relative;
@@ -357,7 +365,7 @@ a:active {
 
 .top-search-modal {
     right: 230px;
-    margin-top: 35px;
+    top: 39px;
 }
 .top-login-modal input {
     width: 310px;
@@ -392,7 +400,7 @@ a:active {
     float: left;
 }
 .top-login-modal a {
-    float: right;
+    float: left;
     display: block;
     margin-bottom: 0;
     font-weight: 200;
@@ -439,7 +447,7 @@ a:active {
 
 .top-basket-modal {
     position: absolute;
-    top: 49px;
+    top: 39px;
     right: 0px;
     width: 540px;
     padding: 20px 15px;
@@ -502,7 +510,7 @@ a:active {
     width: 120px;
 }
 .sum {
-	display: inline-block;
+    display: inline-block;
     margin-right: 33px;
     float: right;
     padding-top: 10px;
@@ -530,9 +538,8 @@ a:active {
     font-weight: 700;
     border-top: 1px solid #CACAC7;
 }
-
 .total .link-btn {
-	padding: 10px 15px;
+    padding: 10px 15px;
 }
 /* Cлайдер*/
 
@@ -864,16 +871,15 @@ a:active {
 .map {
     position: relative;
     width: 100%;
-	height: 430px;
+    height: 430px;
     overflow: hidden;
     margin: 0 auto;
 }
-.map img{
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-	
+.map img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 .map-contacts {
     position: absolute;
@@ -887,9 +893,9 @@ a:active {
     border-radius: 16px;
 }
 .map-contacts .think {
-	width: 200px; 
+    width: 200px;
     margin: 0;
-	margin-bottom: 4px;
+    margin-bottom: 4px;
     font-size: 14px;
     line-height: 20px;
     font-weight: 200;
@@ -899,38 +905,38 @@ a:active {
     margin-bottom: 25px;
 }
 .map-contacts .bold {
-	margin: 0;
+    margin: 0;
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
     color: #323232;
 }
 .map-contacts .link-btn {
-	margin-top: 22px;
+    margin-top: 22px;
     padding: 10px 28px;
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
-	white-space: nowrap;
+    white-space: nowrap;
 }
 /* Обратная связь*/
 
 @-webkit-keyframes bounce {
     0% {
         -webkit-transform: scale(0.1);
-                transform: scale(0.1);
+        transform: scale(0.1);
     }
     70% {
         -webkit-transform: scale(0.7);
-                transform: scale(0.7);
+        transform: scale(0.7);
     }
     90% {
         -webkit-transform: scale(2);
-                transform: scale(2);
+        transform: scale(2);
     }
     100% {
         -webkit-transform: scale(1);
-                transform: scale(1);
+        transform: scale(1);
     }
     0% {
         opacity: 0;
@@ -948,19 +954,19 @@ a:active {
 @keyframes bounce {
     0% {
         -webkit-transform: scale(0.1);
-                transform: scale(0.1);
+        transform: scale(0.1);
     }
     70% {
         -webkit-transform: scale(0.7);
-                transform: scale(0.7);
+        transform: scale(0.7);
     }
     90% {
         -webkit-transform: scale(2);
-                transform: scale(2);
+        transform: scale(2);
     }
     100% {
         -webkit-transform: scale(1);
-                transform: scale(1);
+        transform: scale(1);
     }
     0% {
         opacity: 0;
@@ -1004,19 +1010,18 @@ a:active {
     right: 18px;
     width: 22px;
     height: 22px;
-	padding: 0;
+    padding: 0;
     font-size: 0;
     background-color: transparent;
     border: 0;
     cursor: pointer;
 }
-
 .feedback-modal-close::before,
 .feedback-modal-close::after {
     content: "";
     position: absolute;
     top: 13px;
-	left: -3px;
+    left: -3px;
     width: 23px;
     height: 2px;
     background-color: #323232;
@@ -1052,7 +1057,7 @@ a:active {
 .form-text {
     width: 424px;
     height: 153px;
-	color: #999999;
+    color: #999999;
 }
 .form-text:focus + .form-label {
     display: block;
@@ -1083,8 +1088,8 @@ a:active {
     opacity: 0;
 }
 .feedback-modal .btn {
-	position: relative;
-	left: 66%;
+    position: relative;
+    left: 66%;
 }
 .modal-overlay {
     position: fixed;
@@ -1095,11 +1100,9 @@ a:active {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
 }
-
 .top-feedback:hover ~ .feedback-modal-wrapper,
 .top-feedback:focus ~ .feedback-modal-wrapper,
-.feedback-modal-wrapper:hover
- {
+.feedback-modal-wrapper:hover {
     display: block;
 }
 /* Страница каталога*/
@@ -1153,7 +1156,7 @@ a:active {
     padding-left: 18px;
 }
 .change-population option:nth-child(n+1) {
-	color: #323232;
+    color: #323232;
 }
 .change-population,
 .change-price,
@@ -1305,20 +1308,19 @@ a:active {
     background-color: rgba(255, 255, 255, 1);
 }
 .btn-hollow:active {
-	padding: 10px 29px;
+    padding: 10px 29px;
     background-color: #EAEAEA;
     box-shadow: inset 0 3px 2px -1px #323232;
     border: none;
 }
 /* Каталог*/
 
-
 .catalog {
-	width: 1200px;
+    width: 1200px;
     margin: 0 auto;
-	margin-bottom: 44px;
-	padding: 4px 14px;
-    font-size: 0;   
+    margin-bottom: 44px;
+    padding: 4px 14px;
+    font-size: 0;
     box-sizing: border-box;
 }
 .catalog .catalog-item {
@@ -1352,10 +1354,10 @@ a:active {
 .catalog-item .link-btn {
     visibility: hidden;
     margin-top: 10px;
-	padding: 5px 15px 10px;
-	font-size: 18px;
-	line-height: 24px;
-	font-weight: 700;	
+    padding: 5px 15px 10px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
 }
 .catalog-item:hover {
     position: relative;
@@ -1450,20 +1452,20 @@ a:active {
     opacity: 0.8;
 }
 .social-btn-tw::before {
-    background-image: url(../img/social-sprite.png);
-    background-position: 0 0;
+    background-image: url(../img/sprite-icon.png);
+    background-position: -1px -1045px;
 }
 .social-btn-inst::before {
-    background-image: url(../img/social-sprite.png);
-    background-position: -51px 0;
+    background-image: url(../img/sprite-icon.png);
+    background-position: -1px -1095px;
 }
 .social-btn-fb::before {
-    background-image: url(../img/social-sprite.png);
-    background-position: -102px 0;
+    background-image: url(../img/sprite-icon.png);
+    background-position: -1px -1045px;
 }
 .social-btn-vk::before {
-    background-image: url(../img/social-sprite.png);
-    background-position: -152px 0;
+    background-image: url(../img/sprite-icon.png);
+    background-position: -1px -1195px;
 }
 .social-btn:hover::before {
     opacity: 1;
@@ -1520,7 +1522,7 @@ a:active {
     text-decoration: none;
 }
 .footer-copyright img {
-	width: auto;
+    width: auto;
     margin-right: 77px;
 }
 .footer-copyright .link {
